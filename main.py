@@ -8,13 +8,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Örnek veri modeli
 class Item(BaseModel):
     name: str
     description: Optional[str] = None
     price: float
 
-# Geçici bellek içi veritabanı (In-memory DB)
 db = {}
 
 @app.get("/")
